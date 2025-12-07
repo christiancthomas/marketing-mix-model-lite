@@ -1,5 +1,3 @@
-"""Tests for MMM model"""
-
 import numpy as np
 from src.data.generate import generate_weekly_data
 from src.model import MMM

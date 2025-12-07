@@ -1,5 +1,3 @@
-"""Tests for adstock and saturation transforms."""
-
 import numpy as np
 from src.transforms import adstock, saturation
 
