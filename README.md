@@ -7,16 +7,27 @@ Game publishers allocate budgets across channels like Twitch, YouTube, and Paid 
 ```bash
 git clone https://github.com/christiancthomas/marketing-mix-model-lite.git
 cd marketing-mix-model-lite
+
+# create venv & activate
+python -m venv venv
+source venv/bin/activate
+
+# install package requirements
+pip install -r requirements.txt
 ```
 
-*I will include setup instructions as features are added.*
+Generate synthetic data and run tests:
+
+```bash
+python src/data/generate.py
+pytest tests/
+```
 
 ## What's Here
 
-- Synthetic data generation (*planned*)
-- Adstock and saturation transforms (*planned*)
-- Elastic Net regression (*planned*)
-  - with seasonality (*TBD*)
+- Synthetic data generation (104 weeks, 6 channels)
+- Adstock and saturation transforms
+- Elastic Net regression with Fourier seasonality
 - Channel contribution analysis (*planned*)
 
 ## Methodology
