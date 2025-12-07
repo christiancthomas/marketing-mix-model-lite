@@ -33,7 +33,7 @@ Search ads might decay quickly (days) since intent is immediate, while brand cha
 
 **Saturation** models diminishing returns. This captures the phenomenon where doubling spend typically doesn't result in the doubling of incremental sales. This is especially true at higher spend. I'll apply this via log or square-root mathematical transforms to media variables before regression in an attempt to capture this effect.
 
-Marginal ROAS decreases as spend increases due to features such as audience overlap, audience saturation, and creative fatigue. This non-linear relationship is fundamental to media planning and widely documented in MMM literature ([Kotler & Keller, 2016](https://www.pearson.com/us/higher-education/program/Kotler-Marketing-Management-15th-Edition/PGM323859.html)). The specific curve shape varies by channel. For example, smaller paid social channels (e.g., Reddit) may saturate faster than broader reach networks (Meta, Google, etc.).
+Marginal ROAS decreases as spend increases due to features such as audience overlap, audience saturation, and creative fatigue. This non-linear relationship is fundamental to media planning and widely understood in the marketing domain and should be accounted for in MMM applications. The specific curve shape varies by channel. For example, smaller paid social channels (e.g., Reddit) may saturate faster than broader reach networks (Meta, Google, etc.).
 
 ### Regression model
 
