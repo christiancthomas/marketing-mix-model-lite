@@ -3,6 +3,7 @@
 Game publishers allocate budgets across channels like Twitch, YouTube, and Paid Social, but quantifying which channels drive incremental sales after the chaos of a launch remains difficult outside of user-level attribution. This lightweight Marketing Mix Model estimates channel contributions across aggregate conversion and spend data.
 
 <img width="1500" height="900" alt="channel_contribution" src="https://github.com/user-attachments/assets/a332ecc6-2431-48bf-b336-d75ab851a632" />
+
 _Example output of channel contributions over time_
 
 ## Quick Start
@@ -57,6 +58,6 @@ Marginal ROAS decreases as spend increases due to features such as audience over
 
 **Why not standard regression?** In gaming, marketing channels are highly correlated. For example, YouTube & Google Search campaigns often run alongside Twitch sponsorships and paid social pushes to take advantage of specific marketing beats for moments like DLC launches or large updates. This multicollinearity makes ordinary least squares regression less stable. Small data changes have been known to produce wildly different attribution estimates.
 
-In my research, Elastic Net addresses this effect through dual penalties. The L1 penalty (lasso) hanldes automatic variable selection, zeroing out less important channels. The L2 penalty (ridge) shrinks correlated coefficients toward each other, preventing any single channel from getting extreme attribution. It's my opinion that this combination yields more stable, and reasonable results for the gaming industry.
+In my research, Elastic Net addresses this effect through dual penalties. The L1 penalty (lasso) handles automatic variable selection, zeroing out less important channels. The L2 penalty (ridge) shrinks correlated coefficients toward each other, preventing any single channel from getting extreme attribution. It's my opinion that this combination yields more stable, and reasonable results for the gaming industry.
 
 **Why this matters for MMM:** Limited time-series data is a common challenge for the application of MMM in gaming (we're lucky to get even a year's worth of weekly data/observations) relative to the number of marketing variables. In an ideal scenario, we could have ~100 weeks but potentially 10+ channels plus seasonality terms. We're often in a scenario where we have **more variables than we have reliable data points**. Without regularization, the model can perfectly fit the training data by memorizing noise, leading to poor predictions on new periods. This approach aligns with industry practices at [Google](https://research.google/pubs/pub46001/) and [Facebook's Robyn](https://github.com/facebookexperimental/Robyn) MMM frameworks.
