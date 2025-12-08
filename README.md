@@ -28,7 +28,19 @@ pytest tests/
 - Synthetic data generation (104 weeks, 6 channels)
 - Adstock and saturation transforms
 - Elastic Net regression with Fourier seasonality
-- Channel contribution analysis (*planned*)
+- Rolling-origin cross-validation
+- Channel contribution decomposition & ROAS
+- Budget reallocation scenarios
+
+## Results
+
+### Channel Contribution Over Time
+
+![Channel Contribution](reports/figures/channel_contribution.png)
+
+### ROAS by Channel
+
+![ROAS by Channel](reports/figures/roas_by_channel.png)
 
 ## Methodology
 
