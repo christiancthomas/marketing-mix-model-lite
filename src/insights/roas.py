@@ -1,5 +1,5 @@
 """
-ROAS (Return on Ad Spend) calculations.
+ROAS (Return on Ad Spend) calculations
 
 ROAS = incremental sales attributed to channel / spend on channel
 
@@ -14,7 +14,7 @@ from src.insights.decompose import decompose_sales
 
 def calculate_roas(model, df):
     """
-    Calculate ROAS per channel.
+    Calculates ROAS per channel:
 
     Returns dict with:
     - total_spend: sum of spend
@@ -39,9 +39,6 @@ def calculate_roas(model, df):
 
 
 def roas_summary(model, df):
-    """
-    Pretty summary of ROAS by channel, sorted by effectiveness.
-    """
     roas_data = calculate_roas(model, df)
 
     rows = []

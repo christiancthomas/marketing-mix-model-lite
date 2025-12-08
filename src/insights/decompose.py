@@ -1,7 +1,7 @@
 """
 Sales decomposition: break predicted sales into channel contributions.
 
-The model's coefficients are in scaled space, so we need to unscale
+Note: The model's coefficients are in scaled space, so we need to unscale
 them to get real dollar contributions per channel.
 """
 
@@ -11,9 +11,12 @@ import pandas as pd
 
 def decompose_sales(model, df):
     """
-    Break down predicted sales into base + channel + seasonality contributions.
+    Break down predicted sales into:
+    - base
+    - channel contributions
+    - seasonality effects
 
-    Returns DataFrame with columns:
+    Outputs df with columns:
     - base: intercept (organic sales baseline)
     - {channel}: contribution from each marketing channel
     - seasonality: combined fourier term effects

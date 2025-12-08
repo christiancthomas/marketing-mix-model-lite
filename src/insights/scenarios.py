@@ -1,7 +1,6 @@
 """
-Budget reallocation scenarios.
-
-Answer questions like: "What if we shifted 10% of Reddit spend to Meta?"
+Budget reallocation scenarios to answer questions like:
+- "What if we shifted 10% of Reddit spend to Meta?"
 """
 
 import pandas as pd
@@ -15,7 +14,7 @@ def budget_scenario(model, df, reallocations):
         e.g., {"spend_meta": 1.1, "spend_reddit": 0.9}
         means +10% to Meta, -10% from Reddit
 
-    Returns dict with baseline vs scenario comparison.
+    Returns dict with baseline vs scenario comparison
     """
     df_scenario = df.copy()
 
@@ -49,7 +48,7 @@ def budget_scenario(model, df, reallocations):
 
 def optimize_reallocation(model, df, source_channel, target_channel, shift_pct=0.10):
     """
-    Convenience function: shift budget from one channel to another.
+    Convenience function: shifts budget from one channel to another.
 
     Example: optimize_reallocation(model, df, "reddit", "meta", 0.10)
     shifts 10% of Reddit spend to Meta.
