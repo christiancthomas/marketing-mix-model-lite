@@ -2,6 +2,9 @@
 
 Game publishers allocate budgets across channels like Twitch, YouTube, and Paid Social, but quantifying which channels drive incremental sales after the chaos of a launch remains difficult outside of user-level attribution. This lightweight Marketing Mix Model estimates channel contributions across aggregate conversion and spend data.
 
+<img width="1500" height="900" alt="channel_contribution" src="https://github.com/user-attachments/assets/a332ecc6-2431-48bf-b336-d75ab851a632" />
+_Example output of channel contributions over time_
+
 ## Quick Start
 
 ```bash
@@ -31,16 +34,6 @@ pytest tests/
 - Rolling-origin cross-validation
 - Channel contribution decomposition & ROAS
 - Budget reallocation scenarios
-
-## Results
-
-### Channel Contribution Over Time
-
-![Channel Contribution](reports/figures/channel_contribution.png)
-
-### ROAS by Channel
-
-![ROAS by Channel](reports/figures/roas_by_channel.png)
 
 ## Methodology
 
