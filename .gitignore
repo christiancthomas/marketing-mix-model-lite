@@ -165,3 +165,5 @@ __marimo__/
 # Project-specific
 data/*.csv
 reports/*.json
+*.png
+*.gif
