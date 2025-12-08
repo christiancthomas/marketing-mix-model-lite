@@ -6,7 +6,7 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 
-# Read decomposition data (run export_data.py first)
+# read decomposition data (run export_data.py first)
 decomp <- read.csv("data/decomposition.csv")
 
 # reshape for stacking
@@ -24,7 +24,7 @@ channel_order <- decomp_long %>%
 
 decomp_long$channel <- factor(decomp_long$channel, levels = rev(channel_order))
 
-# Brand palette
+# color palette
 channel_colors <- c(
   "google" = "#5555F2",  # Blurple
   "meta" = "#8A57F0",    # Purple
