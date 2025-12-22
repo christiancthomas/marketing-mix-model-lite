@@ -1,5 +1,7 @@
 # Marketing Mix Model — Lite
 
+![CI](https://github.com/christiancthomas/game-launch-budget-optimization/actions/workflows/pr-check.yml/badge.svg) ![Python](https://img.shields.io/badge/python-3.13%2B-blue) ![R](https://img.shields.io/badge/R-4.0%2B-blue)
+
 Game publishers allocate budgets across channels like Twitch, YouTube, and Paid Social, but quantifying which channels drive incremental sales after the chaos of a launch remains difficult outside of user-level attribution. This lightweight Marketing Mix Model estimates channel contributions across aggregate conversion and spend data.
 
 <img width="1500" height="900" alt="channel_contribution" src="https://github.com/user-attachments/assets/a332ecc6-2431-48bf-b336-d75ab851a632" />
